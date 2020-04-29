@@ -45,6 +45,7 @@ let app = express();
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(express.static('static'))
 
 // Set routes
 app.get('/', index.getHomePage);
