@@ -1,6 +1,10 @@
 body {
     background-color: chartreuse !important;
-};
+}
+
+#center {
+    text-align: center !important;
+}
 
 
 
