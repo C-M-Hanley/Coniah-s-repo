@@ -3,17 +3,48 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+                    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+                    <style>
+                    .mySlides {display:none;}
+                    </style>
 </head>
 <body>
     <div class="page-wrapper">
         <nav class="navbar">
             <span class="navbar-brand mb-0 h1" style="width: 100%;">
-                <div id="center" cclass="container text-center" style="text-align:center">
-                    <a href="/" style="font-size: 100px; color: brown;">Garden Planer!</a>
+                <div id="center" class="container text-center" style="text-align:center">
+                    <a href="/" style="font-size: 100px; color: brown;">Garden Planner!</a>
+                    <br>
                 </div>
+                    <div class="w3-content w3-section" style="max-width:300px">
+                        <a href="https://migardener.com/blog/"> <img class="mySlides" src="https://media.giphy.com/media/I01tgsEHtjRm0/giphy.gif" style="width:100%; height:206;"></a>
+                        <a href="https://migardener.com/blog/"> <img class="mySlides" src="https://i.makeagif.com/media/4-18-2017/LUqJLD.gif" style="width:100%; height:206;"></a>
+                        <a href="https://migardener.com/blog/"> <img class="mySlides" src="https://media.giphy.com/media/ZuhhRTIUFF00U/giphy.gif" style="width:100%; height:206;"></a>
+                        <a href="https://migardener.com/blog/"> <img class="mySlides" src="https://media.giphy.com/media/qF27eplAvQLUA/giphy.gif" style="width:100%; height:206;;"></a>
+                    </div>
                 <br>
                 <div id="center" cclass="container text-center" style="text-align:center">
-                <a href="/add" style="font-size: 70px; color: rgb(7, 207, 174);">Add a Plant.</a>
+                <a href="/add" style="font-size: 70px; color: rgb(7, 207, 174);">Add a Plant.</a>    
             </div>
             </span>
         </nav>
+                <script>
+                    var myIndex = 0;
+                    carousel();
+                    
+                    function carousel() {
+                      var i;
+                      var x = document.getElementsByClassName("mySlides");
+                      for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";  
+                      }
+                      myIndex++;
+                      if (myIndex > x.length) {myIndex = 1}    
+                      x[myIndex-1].style.display = "block";  
+                      setTimeout(carousel, 3000); // Change image every 2 seconds
+                    }
+                    </script>
+                    

@@ -1,32 +1,33 @@
 <%- include('partials/header') %>
+<body style="color: brown; background-color: lawngreen;">
 <div class="container">
 <% if (add || player) { %>
     <form method="post" action="/<%=add ? 'add' : `edit/${player.id}`%>">
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="first-name">Plant, Name</label>
+                <label for="first-name">Plant,<br> Name</label>
                 <input type="text" class="form-control" name="first_name" value="<%=add ? '' : player.first_name%> " required>
             </div>
             <div class="form-group col-md-6">
-                <label for="last-name">Space Needed, Hours of Sunlight.</label>
+                <label for="last-name">Space Needed,<br>Hours of Sunlight.</label>
                 <input type="text" class="form-control" name="last_name" value="<%=add ? '' : player.last_name%>" required>
             </div>
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label for="number">Days to maturity</label>
+                <label for="number">Days to Germinate,<br>Days to maturity</label>
                 <input type="number" class="form-control" name="number" value="<%=add ? '' : player.number%>" required>
             </div>
             <div class="form-group col-md-6">
-                <label for="position">Position</label>
+                <label for="position">Plant Time.</label>
                 <select name="position" class="form-control" required>
                 <% if (!add) { %>
                     <option selected><%= player.position %></option>
                 <% } %>
-                    <option>Indoors</option>
+                    <option>March - April Indoors, and May - June = Cold Intolerant</option>
                     <option>March - April = Cold Hardy</option>
                     <option>April - May = Cold Tolerant</option>
-                    <option>May - June = Not Cold Hardy</option>
+                    <option>May - June = Cold Intolerant</option>
                     <option>August - September = Cold Hardy</option>
                     <option>March - April and August - September = Cold Hardy</option>
                 </select>
